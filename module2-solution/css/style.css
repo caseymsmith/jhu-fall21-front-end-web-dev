@@ -28,6 +28,15 @@ h1 {
   margin-bottom: 5%; 
 }
 
+h3 {
+    font-family: calibri light;
+    font-size: 25px;
+    text-align: left; 
+    padding-top: 15px; 
+    padding-bottom: 15px; 
+    margin-left: 15px;
+}
+
 .section {  
   clear: margin;
   position: relative;
@@ -55,8 +64,15 @@ h1 {
   color: white;   
 }
 
+.allView {
+  display: block;
+}
+.mobileView {
+  display: none;
+}
+
 /*The browser should display a desktop version of the site when the width of the browser window is 992px and above.*/
-@media (min-width: 992px) {  
+@media only screen and (min-device-width: 992px) {  
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
     margin: auto;    
@@ -100,7 +116,7 @@ h1 {
 }
 
 /*Tablet view should appear only if the width of the browser window is between 768px and 991px, inclusively.*/
-@media (min-width: 768px) and (max-width: 991px) {  
+@media (min-device-width: 768px) and (max-device-width: 991px) {  
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
     margin: auto;
@@ -144,7 +160,15 @@ h1 {
 }  
 
 /*Mobile view should appear only if the width of the browser is equal to or less than 767px.*/
-@media (max-width: 767px){  
+@media only screen and (max-device-width: 767px){  
+  .allView {
+    display: none;
+  }
+  .mobileView {
+    display: block;
+    text-align: left;
+  }
+
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
     margin: auto;
