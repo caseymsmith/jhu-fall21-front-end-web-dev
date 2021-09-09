@@ -44,6 +44,7 @@ p {
 
 p:hover {
     overflow-y: scroll;
+    cursor: s-resize;
 }
 
 .section {  
