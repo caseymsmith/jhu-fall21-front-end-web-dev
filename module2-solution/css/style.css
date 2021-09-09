@@ -37,6 +37,15 @@ h3 {
     margin-left: 15px;
 }
 
+p {
+  max-height: 70px;
+  overflow: hidden;
+}
+
+p:hover {
+    overflow-y: scroll;
+}
+
 .section {  
   clear: margin;
   position: relative;
