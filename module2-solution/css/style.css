@@ -29,12 +29,12 @@ h1 {
 }
 
 h3 {
-    font-family: calibri light;
-    font-size: 25px;
-    text-align: left; 
-    padding-top: 15px; 
-    padding-bottom: 15px; 
-    margin-left: 15px;
+  font-family: calibri light;
+  font-size: 25px;
+  text-align: left; 
+  padding-top: 15px; 
+  padding-bottom: 15px; 
+  margin-left: 15px;
 }
 
 p {
@@ -43,8 +43,8 @@ p {
 }
 
 p:hover {
-    overflow-y: scroll;
-    cursor: s-resize;
+  overflow-y: scroll;
+  cursor: s-resize;
 }
 
 .section {  
@@ -62,19 +62,22 @@ p:hover {
 }  
 
 .chicken{
+  max-height: 100px;
+  overflow: hidden;
   background-color:#fcc203;         
   color: white;
 }
 
-.chickenDescription {
-  display:none;
-}
-
 .beef{
+  max-height: 100px;
+  overflow: hidden;
   background-color:#db7169;
   color: white;  
 }
+
 .sushi{
+  max-height: 100px;
+  overflow: hidden;
   background-color:#7dffc9;
   color: white;   
 }
@@ -84,6 +87,10 @@ p:hover {
 }
 .mobileView {
   display: none;
+}
+
+.foodDescription {
+  display:none;
 }
 
 /*The browser should display a desktop version of the site when the width of the browser window is 992px and above.*/
@@ -179,26 +186,43 @@ p:hover {
   .allView {
     display: none;
   }
+
   .mobileView {
     display: block;
     text-align: left;
   }
 
   h2 {
-  position: absolute;
-  top: 0px;
-  right:0px;
-  margin: auto;
-  float: none;
-  height: 35px;
-  width: 100%;
-  border:1px solid black;
-  text-align:center;
-  padding: center;
+    position: absolute;
+    top: 0px;
+    right:0px;
+    margin: auto;
+    float: none;
+    height: 35px;
+    width: 100%;
+    border:1px solid black;
+    text-align:center;
+    padding: center;
   }
 
-  .chickenDescription {
-    display: block;
+  .foodDescription {
+    display: inline;
+    overflow: hidden;
+  }
+
+  .chicken:hover {
+    overflow-y: scroll;
+    cursor: s-resize;
+  }
+
+  .beef:hover {
+    overflow-y: scroll;
+    cursor: s-resize;
+  }
+
+  .sushi:hover {
+    overflow-y: scroll;
+    cursor: s-resize;
   }
 
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
