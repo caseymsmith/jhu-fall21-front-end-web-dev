@@ -1,3 +1,3 @@
-## Welcome to Casey Smith's Deployed Page!
+## Welcome to Casey Smith's Fall 2021 Semester Repo
 
-This is my github.io page for the Johns Hopkins University Fall 2021 Semester in the course EN.605.787.81.FA21 Front End Web App Development
+This is my github repository for the Johns Hopkins University Fall 2021 Semester in the course EN.605.787.81.FA21 Front End Web App Development
