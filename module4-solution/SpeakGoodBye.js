@@ -8,7 +8,6 @@
 // STEP 7: Create an object, called 'byeSpeaker' to which you will attach
 // the "speak" method and which you will expose to the global context
 // See Lecture 52, part 1
-// var byeSpeaker =
 
 // DO NOT attach the speakWord variable to the 'byeSpeaker' object.
 (function(window){
@@ -21,6 +20,18 @@
 byeSpeaker.speak = function(name) {
 	console.log(byeSpeaker.speakWord + " " + name);
 }
+
+// 2. In addition to the regular requirements, 
+// research how Array.prototype.map function works.
+// a. Add another method called speakSimple into the SpeakGoodBye.js 
+// and SpeakHello.js that is externally exposed just like the speak 
+// method is. The speakSimple method should not use console.log, but 
+// instead should simply return the greeting concatenated to the passed 
+// in name argument.
+byeSpeaker.speakSimple = function(name) {
+	return byeSpeaker.speakWord + " " + name;
+}
+
 window.byeSpeaker = byeSpeaker;
 })(window);
 

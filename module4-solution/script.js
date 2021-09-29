@@ -35,7 +35,7 @@ WARNING!!! WARNING!!!
 // (Note, Step 2 will be done in the SpeakHello.js file.)
 
 (function(){
-var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
+  var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
 
 // STEP 10:
 // Loop over the names array and say either 'Hello' or "Good Bye"
@@ -62,5 +62,56 @@ for (var i = 0; i < names.length; i++) {
   } else {
     helloSpeaker.speak(names[i]);
   }
+
+//  b. In the main script.js, use the map function to create an array based 
+// on the names array. This array will contain the greetings based on the 
+// names with the same rules as implemented previously. The function passed 
+// into the map function should not be an inline function, i.e., separate it 
+// into its own named function and pass it into the map function as a value.
+// The end result should be that the list prints out twice in the browser 
+// console after you complete this part.
+
+var nameMap = function (name) {
+  var firstLetter = name.charAt(0).toLowerCase();
+
+    //conditional return
+    return firstLetter === "j" ? byeSpeaker.speakSimple(name) : helloSpeaker.speakSimple(name);
+  };
+
+  var greetings = names.map(nameMap);
+  greetings.forEach((greeting) => console.log(greeting));
+
+// (Bonus/Optional) In addition to the previous requirements, research how 
+// Array.prototype.reduce function works. (Psst.. Once you learn how to use 
+// it and do it a couple of times, the power of this function will blow you 
+// away. You will want to use it everywhere. Yes, it’s that cool! Don’t say I 
+// didn’t warn you! You’re welcome. 😆)
+// a. You already implemented speakSimple method at this point. 
+// You will use that method in this part as well.
+// b. In the main script.js, use the reduce function to create 2 separate arrays: 
+// one with all the ‘hello’ greetings and another with all the good bye greetings. 
+// Then, loop over each array (obviously separately) and print out the greetings 
+// to the console with console.log. You are required to use {hello: [], bye: []} 
+// as your initialValue. (Kind of a hint, isn’t it?)
+var initialValue = {
+  hello: [],
+  bye: [],
+};
+
+const reducer = (previousValue, currentValue) => {
+  if (currentValue.charAt(0).toLowerCase() == "h") {
+    previousValue.hello.push(currentValue);
+  } else {
+    previousValue.bye.push(currentValue);
+  }
+  return previousValue;
+};
+
+names.map(nameMap).reduce(reducer, initialValue);
+
+// The end result should be that the list prints out 3 times. The 3rd time, it will 
+// print each group of greetings separately (‘hello’ and ‘good bye’).
+Object.entries(initialValue).forEach(([_key, value]) =>
+  value.forEach((greeting) => console.log(greeting)))
 }
 })();

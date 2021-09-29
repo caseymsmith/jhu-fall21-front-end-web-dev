@@ -10,13 +10,28 @@
 (function(window){
 	var helloSpeaker = {};
 	helloSpeaker.speakWord = "Hello";
-
+	
 // STEP 4: Rewrite the 'speak' function such that it is attached to the
 // helloSpeaker object instead of being a standalone function.
 // See Lecture 52, part 2
 helloSpeaker.speak = function(name) {
 	console.log(helloSpeaker.speakWord + " " + name);
 }
+
+// 2. In addition to the regular requirements, 
+// research how Array.prototype.map function works.
+// a. Add another method called speakSimple into the SpeakGoodBye.js 
+// and SpeakHello.js that is externally exposed just like the speak 
+// method is. The speakSimple method should not use console.log, but 
+// instead should simply return the greeting concatenated to the passed 
+// in name argument.
+helloSpeaker.speakSimple = function(name) {
+	return helloSpeaker.speakWord + " " + name;
+}
+
+//Stop from redefining "speak"
+  Object.freeze(helloSpeaker);
+
 window.helloSpeaker = helloSpeaker;
 })(window);
 
