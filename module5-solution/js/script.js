@@ -43,7 +43,7 @@ var insertProperty = function (string, propName, propValue) {
   string = string
     .replace(new RegExp(propToReplace, "g"), propValue);
   return string;
-};
+}
 
 // Remove the class 'active' from home and switch to Menu button
 var switchMenuToActive = function () {
@@ -158,7 +158,7 @@ dc.loadMenuItems = function (categoryShort) {
 //Load about page 
 dc.loadAbout = function() {
   document.getElementById("main-content").innerHTML = 
-  '<object type="text/html" data="snippets/about.html" ></object>';
+  '<object type="text/html" data="snippets/about.html"></object>';
 };
 
 // Builds HTML for the categories page based on the data
