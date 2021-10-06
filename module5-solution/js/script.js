@@ -157,9 +157,8 @@ dc.loadMenuItems = function (categoryShort) {
 
 //Load about page 
 dc.loadAbout = function() {
-  document.getElementById("main-content").innerHTML = 
-  '<object type="text/html" data="snippets/about.html"></object>';
-};
+  document.getElementById("main-content").innerHTML = '<object type="text/html" data="snippets/about.html"></object>';
+}
 
 // Builds HTML for the categories page based on the data
 // from the server
