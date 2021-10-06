@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		} 
 		index++;
 	});
+	document.getElementById("index").innerHTML = numberOfStars + "-star rating";
 });
 </script>
 
@@ -40,7 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				<span class="fa fa-star-o"></span>
 			</div>
 		</div>
+		<!-- (Bonus/Optional) A really easy one. Display the numeric/textual number of stars right next to the star icons. For example, after the 4 filled in stars and one empty star, it should say the words “4-star rating”. -->
+		<p id="index"></p>
 	</div>
+
 
 	<!-- jQuery (Bootstrap JS plugins depend on it) -->
 	<script src="../js/jquery-2.1.4.min.js"></script>
