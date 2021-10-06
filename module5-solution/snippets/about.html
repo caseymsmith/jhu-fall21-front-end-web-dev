@@ -1,0 +1,50 @@
+<!--  In your Javascript code, create a function that produces a random number from 1 to 5 (inclusively). -->
+<script type="text/javascript">
+function getRandom() {
+	return Math.floor(Math.random() * (5) + 1)
+}
+
+// e. Use that random function to assign values to each classX property. An empty star should have its class value be class="fa fa-star-o". A filled star should have its class value be class="fa fa-star". The empty star, if any, should be the last one in the list.
+document.addEventListener('DOMContentLoaded', function () {
+	var numberOfStars =  getRandom();
+	var row = $('.col');
+	var index = 1;
+	row.children('span').each(function () {
+		if(index <= numberOfStars){
+			$(this).removeClass('fa fa-star-o');
+			$(this).addClass('fa fa-star');
+		} 
+		index++;
+	});
+});
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../css/all.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<span class="fa fa-star-o"></span>
+				<span class="fa fa-star-o"></span>
+				<span class="fa fa-star-o"></span>
+				<span class="fa fa-star-o"></span>
+				<span class="fa fa-star-o"></span>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery (Bootstrap JS plugins depend on it) -->
+	<script src="../js/jquery-2.1.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/ajax-utils.js"></script>
+</body>
+</html>
