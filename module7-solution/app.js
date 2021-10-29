@@ -34,7 +34,6 @@
       items.splice(index, 1);
       service.itemsAlreadyBought.push(bought);
     };
-
   }
 
   ToBuyController.$inject = ['ShoppingListCheckOffService'];
