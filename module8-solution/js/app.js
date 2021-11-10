@@ -9,7 +9,10 @@
   function FoundItemsDirective() {
     var foundItemsDirective = {
       templateUrl: "found.html",
-      scope: {items: "<", onRemove: "&",},
+      scope: {
+        items: "<",
+        onRemove: "&",
+      },
       controller: FoundItemsDirectiveController,
       controllerAs: "foundItems",
       bindToController: true,
@@ -35,7 +38,7 @@
       if (searchTerm) {
         MenuSearchService.getMatchedMenuItems(searchTerm)
         .then((data) => ($scope.found = data))
-        .catch((err) => console.log(err));
+        .catch((error) => console.log(error));
       } else {
         $scope.found = [];
       }
