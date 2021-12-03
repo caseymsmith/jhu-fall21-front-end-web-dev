@@ -1,22 +1,26 @@
 <!doctype html>
 <html lang='en'>
-  <head>
-    <title></title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="lib/angular.js"></script>
-    <script src="lib/angular-ui-router.js"></script>
-    <script src="js/menuapp.module.js"></script>
-    <script src="js/data.module.js"></script>
-    <script src="js/categoriesList/categoriesList.controller.js"></script>
-    <script src="js/categoriesList/categoriesList.component.js"></script>
-    <script src="js/itemsList/itemsList.controller.js"></script>
-    <script src="js/itemsList/itemsList.component.js"></script>
-    <script src="js/routes.js"></script>
-    <script src="js/menudata.service.js"></script>
-  </head>
-  <body>
+<head>
+  <title>Menu App</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="lib/angular.js"></script>
+  <script src="lib/angular-ui-router.js"></script>
+  <script src="js/menuapp.module.js"></script>
+  <script src="js/data.module.js"></script>
+  <script src="js/categoriesList/categoriesList.controller.js"></script>
+  <script src="js/categoriesList/categoriesList.component.js"></script>
+  <script src="js/itemsList/itemsList.controller.js"></script>
+  <script src="js/itemsList/itemsList.component.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/menudata.service.js"></script>
+</head>
+<body ng-app='MenuApp'>
+  
+  <h1>Menu App</h1>
 
-  </body>
+  <ui-view></ui-view>
+
+</body>
 </html>
