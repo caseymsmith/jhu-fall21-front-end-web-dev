@@ -6,3 +6,7 @@ a {
 	font-weight: bold;
 	cursor: pointer;
 }
+
+body {
+	font-family: Calibri;
+}
