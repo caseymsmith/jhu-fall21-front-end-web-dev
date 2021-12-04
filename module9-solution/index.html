@@ -3,16 +3,10 @@
 <head>
   <title>Our Menu</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
-  
-</head>
-<body ng-app='MenuApp'>
-
-  <h1>Our Menu</h1>
-
-  <ui-view></ui-view>
-  <script src="lib/angular.min.js"></script>
-  <script src="lib/angular-ui-router.min.js"></script>
+  <script src="lib/angular.js"></script>
+  <script src="lib/angular-ui-router.js"></script>
   <script src="js/menuapp.module.js"></script>
   <script src="js/data.module.js"></script>
   <script src="js/categories.controller.js"></script>
@@ -21,6 +15,12 @@
   <script src="js/items.component.js"></script>
   <script src="js/routes.js"></script>
   <script src="js/menudata.service.js"></script>
-  
+</head>
+<body ng-app='MenuApp'>
+
+  <h1>Our Menu</h1>
+
+  <ui-view></ui-view>
+
 </body>
 </html>
