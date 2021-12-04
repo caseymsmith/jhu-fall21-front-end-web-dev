@@ -1,0 +1,68 @@
+<div class="container signup">
+  Sign up for the newsletter
+  <fieldset>
+    <form name='regForm' novalidate>
+
+      <input type="text" name="firstname" placeholder="First name"
+        ng-model="SignupCtrl.user.firstname"
+        required>
+        <!-- {{ SignupCtrl.user.firstname }} -->
+        <span
+          ng-if="regForm.firstname.$error.required && regForm.firstname.$touched">
+          firstname is required
+        </span>
+        <br>
+
+      <input type="text" name="lastname" placeholder="Last name"
+        ng-model="SignupCtrl.user.lastname"
+        required>
+        <!-- {{ SignupCtrl.user.lastname }} -->
+        <span
+          ng-if="regForm.lastname.$error.required && regForm.lastname.$touched">
+          lastname is required
+        </span>
+        <br>
+
+      <input type="email" name="email" placeholder="Email"
+        ng-model="SignupCtrl.user.email"
+        required>
+        <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+          Must be a valid email address: handle@domain format
+        </span>
+        <br>
+
+      <input type="text" name="phone" placeholder="Phone ###-###-####"
+        ng-model="SignupCtrl.user.phone"
+        pattern="(\d{3})-(\d{3})-(\d{4})"
+        required>
+        <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+          Phone must be in the format ###-###-####.
+        </span>
+        <br>
+
+      <input type="text" name="favorite" placeholder="Favorite dish"
+        ng-model="SignupCtrl.user.favorite"
+        required>
+        <!-- {{ SignupCtrl.user.favorite }} -->
+        <span
+          ng-if="regForm.favorite.$error.required && regForm.favorite.$touched">
+          Favorite is required
+        </span>
+        <span
+          ng-if="SignupCtrl.completed && !SignupCtrl.validFavorite">
+          No such menu number exists
+        </span>
+        <br>
+
+      <button
+        class="btn btn-primary"
+        ng-disabled="regForm.$invalid"
+        ng-click="SignupCtrl.submit(SignupCtrl.user)">Submit</button>
+
+    </form>
+  </fieldset>
+  <span
+    ng-if="SignupCtrl.completed && SignupCtrl.validFavorite">
+    Your information has been saved
+  </span>
+</div>

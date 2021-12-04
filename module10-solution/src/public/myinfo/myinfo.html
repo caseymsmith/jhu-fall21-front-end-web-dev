@@ -1,0 +1,18 @@
+<!-- TODO: set up a controller using the SignupService to print my info -->
+<div class="container">
+  <span
+    ng-if="!myInfoCtrl.myInfo.firstname">
+    <h2>Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></h2>
+  </span>
+  <span
+    ng-if="myInfoCtrl.myInfo.firstname">
+    Name: {{ myInfoCtrl.myInfo.firstname }} {{ myInfoCtrl.myInfo.lastname }}<br>
+    Email: {{ myInfoCtrl.myInfo.email }}<br>
+    Phone: {{ myInfoCtrl.myInfo.phone }}<br>
+    Favorite dish: {{ myInfoCtrl.myInfo.favoriteDetails.name }} -
+                   {{ myInfoCtrl.myInfo.favoriteDetails.description }}<br>
+    <img class="img-responsive" width="250" height="150"
+         ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.myInfo.favoriteDetails.short_name}}.jpg"
+         alt="{{myInfoCtrl.myInfo.favoriteDetails.name}}">
+  </span>
+</div>
